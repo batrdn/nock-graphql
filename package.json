@@ -1,0 +1,42 @@
+{
+  "name": "nock-graphql",
+  "version": "1.0.0",
+  "description": "Nock-based GraphQL testing library",
+  "main": "dist/index.js",
+  "repository": "https://github.com/batrdn/nock-graphql.git",
+  "author": "batrdn <baterdene.tsogoo220@gmail.com>",
+  "license": "Apache",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier -u --check .",
+    "format:fix": "prettier -u --write .",
+    "lint": "eslint src --ext .js,.ts,",
+    "lint-staged": "lint-staged",
+    "test": "jest",
+    "test:coverage": "yarn test --coverage --colors",
+    "prepare": "husky install",
+    "tsc:check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "graphql": "^15.5.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jest": "^24.3.6",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
+    "nock": "^13.0.11",
+    "prettier": "^2.3.0",
+    "ts-node": "^9.1.1"
+  }
+}
