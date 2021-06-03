@@ -7,9 +7,3 @@ When it comes to testing GraphQL endpoints, there are few issues you need to dea
 
 1. Parsing query string
 2. Adding typenames
-
-## Parsing query string
-
-## Adding typenames
-
-## Installation
