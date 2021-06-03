@@ -1,7 +1,7 @@
 name: CI/CD
 on: push
 jobs:
-  ci:
+  automation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
