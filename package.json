@@ -15,7 +15,8 @@
     "test": "jest",
     "test:coverage": "yarn test --coverage --colors",
     "prepare": "husky install",
-    "tsc:check": "tsc --noEmit"
+    "tsc:check": "tsc --noEmit",
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "graphql": "^15.5.0",

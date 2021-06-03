@@ -1,0 +1,35 @@
+name: CI
+on: push
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          always-auth: true
+          node-version: '12.x'
+          registry-url: //npm.pkg.github.com/
+      - name: Get yarn cache directory
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: yarn-${{ hashFiles('yarn.lock') }}
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+      - name: Format
+        run: yarn format:fix
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test:coverage
+      - name: Build
+        run: yarn build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn release
