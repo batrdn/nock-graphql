@@ -7,11 +7,21 @@ In contrast to Apollo's MockedProvider, nock allows a realistic testing with the
 
 You\'ll need `nock`, `node-fetch` as peer dependencies in order to use this library.
 
-`yarn add -D nock-graphql nock node-fetch`
+```
+yarn add -D nock-graphql nock node-fetch
+```
+
+or
+
+```
+npm install -D nock-graphql nock node-fetch
+```
 
 Additionally, you need to set up global `fetch` implementation incorporated in your `jest` environment:
 
-`global.fetch = require('node-fetch')`
+```
+global.fetch = require('node-fetch')
+```
 
 This could be in your `jest.globals.ts` file.
 
