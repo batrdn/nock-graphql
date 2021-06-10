@@ -43,6 +43,10 @@ beforeAll(() => {
 II. Mocking queries
 
 ```typescript
+import { gql } from 'graphql-tag';
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+import { MockConfig } from 'nock-graphql';
+
 type QueryVariables = {
   id: string;
 };
@@ -50,6 +54,7 @@ type QueryVariables = {
 type QueryResult = {
   foo: { bar: string };
 };
+
 const GetQuery = gql`
   query Test($id: String) {
     foo(id: $id) {
@@ -60,7 +65,7 @@ const GetQuery = gql`
 
 beforeEach(() => {
   client = new ApolloClient({
-    link: new HttpLink({ uri: ENDPOINT }),
+    link: new HttpLink({ uri: 'http://localhost:4000/graphql' }),
     cache: new InMemoryCache({ addTypename: false }),
   });
 });
