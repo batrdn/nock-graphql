@@ -6,6 +6,13 @@
   "repository": "https://github.com/batrdn/nock-graphql.git",
   "author": "batrdn <baterdene.tsogoo220@gmail.com>",
   "license": "Apache",
+  "keywords": [
+    "graphql test",
+    "nock",
+    "client-side graphql test",
+    "unit testing",
+    "graphql test mock"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier -u --check .",
