@@ -13,6 +13,7 @@
     "removeComments": true,
     "sourceMap": true,
     "resolveJsonModule": true,
+    "lib": ["dom"],
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/*"]
