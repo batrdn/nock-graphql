@@ -10,7 +10,6 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "./dist",
     "removeComments": true,
