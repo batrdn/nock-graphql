@@ -26,7 +26,7 @@
     "test": "jest",
     "test:coverage": "yarn test --coverage --colors",
     "prepare": "husky install && npm run build",
-    "tsc:check": "tsc --noEmit",
+    "tsc:check": "tsc",
     "prepublish": "tsc",
     "release": "semantic-release"
   },
