@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Nock-based GraphQL testing library",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/batrdn/nock-graphql.git",
   "author": "batrdn <baterdene.tsogoo220@gmail.com>",
   "license": "Apache",
@@ -23,6 +24,7 @@
     "test:coverage": "yarn test --coverage --colors",
     "prepare": "husky install",
     "tsc:check": "tsc --noEmit",
+    "prepublish": "tsc",
     "release": "semantic-release"
   },
   "peerDependencies": {
