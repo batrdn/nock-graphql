@@ -2,6 +2,9 @@
   "name": "nock-graphql",
   "version": "0.0.0",
   "description": "Nock-based GraphQL testing library",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/batrdn/nock-graphql.git",
@@ -22,7 +25,7 @@
     "lint-staged": "lint-staged",
     "test": "jest",
     "test:coverage": "yarn test --coverage --colors",
-    "prepare": "husky install",
+    "prepare": "husky install && npm run build",
     "tsc:check": "tsc --noEmit",
     "prepublish": "tsc",
     "release": "semantic-release"

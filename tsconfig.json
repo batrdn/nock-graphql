@@ -7,18 +7,17 @@
     "module": "commonjs",
     "noImplicitAny": true,
     "jsx": "react",
-    "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "removeComments": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "lib": ["dom"],
+    "lib": ["dom", "es5", "es6", "es7"],
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["./src"],
   "exclude": ["node_modules", "dist"]
 }
