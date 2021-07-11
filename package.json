@@ -18,16 +18,16 @@
     "graphql test mock"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "format": "prettier -u --check .",
     "format:fix": "prettier -u --write .",
     "lint": "eslint src --ext .js,.ts,",
     "lint-staged": "lint-staged",
     "test": "jest",
     "test:coverage": "yarn test --coverage --colors",
-    "prepare": "husky install && npm run build",
-    "tsc:check": "tsc",
-    "prepublish": "tsc",
+    "prepare": "husky install && yarn build",
+    "tsc:check": "tsc --noEmit",
+    "prepublish": "yarn build",
     "release": "semantic-release"
   },
   "peerDependencies": {
