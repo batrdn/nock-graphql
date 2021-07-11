@@ -1,6 +1,6 @@
 import nock, { Scope } from 'nock';
-import { MockConfig } from 'src/types';
-import { getRequest } from 'src/helpers';
+import { MockConfig } from './types';
+import { getRequest } from './helpers';
 
 export default class NockGraphQL {
   private readonly url: string;

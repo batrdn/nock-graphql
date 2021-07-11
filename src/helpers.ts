@@ -1,5 +1,5 @@
 import { DocumentNode, OperationDefinitionNode, print } from 'graphql';
-import { GraphQLRequest } from 'src/types';
+import { GraphQLRequest } from './types';
 
 export const getRequest = (doc: DocumentNode, variables: Record<string, any>): GraphQLRequest => {
   const operationName = getOperationName(doc);

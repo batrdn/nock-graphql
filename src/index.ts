@@ -1,4 +1,4 @@
-import { MockConfig } from 'src/types';
-import NockGraphQL from 'src/nock-graphql';
+import { MockConfig } from './types';
+import NockGraphQL from './nock-graphql';
 
 export { MockConfig, NockGraphQL };
