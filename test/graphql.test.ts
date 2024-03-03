@@ -1,6 +1,7 @@
-import NockGraphQL from 'src/nock-graphql';
+import fetch from 'cross-fetch';
+import NockGraphQL from '../src/nock-graphql';
 import { ApolloClient, gql, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
-import { MockConfig } from 'src/index';
+import { MockConfig } from '../src';
 
 type QueryVariables = {
   id: string;
@@ -26,7 +27,7 @@ describe('NockGraphQL', () => {
 
   beforeEach(() => {
     client = new ApolloClient({
-      link: new HttpLink({ uri: ENDPOINT }),
+      link: new HttpLink({ fetch, uri: ENDPOINT }),
       cache: new InMemoryCache({ addTypename: false }),
     });
   });

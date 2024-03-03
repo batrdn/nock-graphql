@@ -1,4 +1,4 @@
-import { getOperationName } from 'src/helpers';
+import { getOperationName } from '../src/helpers';
 import gql from 'graphql-tag';
 
 describe('Helpers', () => {

@@ -1,3 +1,4 @@
 jest.config.ts
 jest.globals.ts
 babel.config.js
+test/
