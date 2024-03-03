@@ -31,7 +31,6 @@
     "test:coverage": "npm run test --coverage --colors",
     "prepare": "husky install",
     "tsc:check": "tsc --noEmit",
-    "prepublish": "npm run build",
     "release": "semantic-release"
   },
   "peerDependencies": {

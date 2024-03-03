@@ -48,6 +48,15 @@ export default class NockGraphQL {
   }
 
   /**
+   * Activate method. Preferable to call it beforeEach or beforeAll.
+   */
+  activate(): void {
+    if (!nock.isActive()) {
+      nock.activate();
+    }
+  }
+
+  /**
    * Cleanup method. Preferable to call it afterEach or afterAll.
    */
   cleanup(): void {
