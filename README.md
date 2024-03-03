@@ -5,25 +5,25 @@ In contrast to Apollo's MockedProvider, nock allows a realistic testing with the
 
 ## Installing
 
-You\'ll need `nock`, `node-fetch` as peer dependencies in order to use this library.
+You'll need `nock`, `cross-fetch` as peer dependencies in order to use this library.
 
 ```
-yarn add -D nock-graphql nock node-fetch
-```
-
-or
-
-```
-npm install -D nock-graphql nock node-fetch
+npm install -D nock-graphql nock cross-fetch
 ```
 
 Additionally, you need to set up global `fetch` implementation incorporated in your `jest` environment:
 
 ```
-global.fetch = require('node-fetch')
+global.fetch = require('cross-fetch')
 ```
 
-This could be in your `jest.globals.ts` file.
+or, directly in your `ApolloClient`
+
+```react
+const client = new ApolloClient({
+  link: new HttpLink({ fetch, uri: ENDPOINT }),
+});
+```
 
 ## Usage
 
